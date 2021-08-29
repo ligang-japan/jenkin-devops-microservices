@@ -6,6 +6,7 @@ pipeline {
             steps {
                 sh 'chmod 775 *'
             }
+		}
 		stage('Build'){
 			steps{
 				sh "mvn --version"
