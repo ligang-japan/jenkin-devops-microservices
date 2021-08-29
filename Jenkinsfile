@@ -2,11 +2,11 @@ pipeline {
 	//agent any
 	agent {docker {image 'maven:3.6.3'}}
 	stages {
-		stage('Permissions') {
-            steps {
-                sh 'chmod 775 *'
-            }
-		}
+		// stage('Permissions') {
+        //     steps {
+        //         sh 'chmod 775 *'
+        //     }
+		// }
 		stage('Build'){
 			steps{
 				sh "mvn --version"
