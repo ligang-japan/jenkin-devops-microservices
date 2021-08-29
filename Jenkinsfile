@@ -1,6 +1,6 @@
 pipeline {
-	//agent any
-	agent {docker {image 'maven:3.6.3'}}
+	agent any
+	//agent {docker {image 'maven:3.6.3'}}
 	stages {
 		// stage('Permissions') {
         //     steps {
@@ -9,8 +9,12 @@ pipeline {
 		// }
 		stage('Build'){
 			steps{
-				sh "mvn --version"
-				echo "Test"
+				// sh "mvn --version"
+				 echo "Build"
+				 echo "$PATH"
+				 echo "BUILD NUMBER -$env.BUILD_NUMBER"
+				 echo "$env.JOB_NAME"
+				 
 			}
 		}
 		stage('Test'){
