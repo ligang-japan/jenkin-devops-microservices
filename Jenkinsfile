@@ -25,12 +25,16 @@
 // 	}
 // }
 pipeline {
-	//agent { docker {image 'maven:3.6.3'}}
+	agent any
 	stages {
-		stage('build') {
+		stage('Build') {
 			steps {
-				echo "basic"
-				//sh 'mvn --version'
+				echo "Build"
+			}
+		}
+		stage('Test') {
+			steps {
+				echo "Test"
 			}
 		}
 	}
